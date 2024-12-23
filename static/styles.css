@@ -1,0 +1,66 @@
+.container {
+  /*if need be we can add some padding to everything*/
+  padding: 0 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+body {
+  /*background: white;*/
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Courier New"; /* Use a font close to your design */ /* Optional background */
+}
+
+span {
+  color: lightpink;
+}
+
+.card {
+  border: 1px solid #424242;
+  box-shadow:
+    0 0.5em 1em -0.125em hsla(0, 0%, 4%, 0.1),
+    0 0 0 1px hsla(0, 0%, 4%, 0.02);
+  border-radius: 15px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#center-text h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+#center-text h3 {
+  text-align: center;
+}
+
+#center-text p {
+  font-size: x-large;
+  text-align: center;
+}
+
+.buttons-container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.black-nav-bar {
+  background-color: #484444;
+  width: 100%;
+  height: 35px;
+  border-radius: 10px 10px 0px 0px;
+}
