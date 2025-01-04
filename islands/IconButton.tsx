@@ -14,7 +14,12 @@ export default function IconButton(
   props: IconButtonProps,
 ) {
   return (
-    <button className="iconbutton" onClick={() => playSound()}>
+    <button
+      className="iconbutton"
+      onClick={() => {
+        playSound();
+      }}
+    >
       <img src={props.image} alt={props.alt} />
       {props.text}
     </button>

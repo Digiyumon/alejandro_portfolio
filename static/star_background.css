@@ -4,22 +4,41 @@
   --light-gold-rgb: 249 181 51;
   --dark-gold-rgb: 215 147 23;
 
+  --dark-pink-rgb: 255, 155, 193;
+  --light-pink-rgb: 255, 87, 51;
+
   --primary-stripe-rgb: 230 230 230;
   --secondary-stripe-rgb: 240 240 240;
 }
 
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 #star-container {
   background: radial-gradient(
-    rgb(var(--light-gold-rgb)),
-    rgb(var(--dark-gold-rgb))
+    rgb(var(--light-pink-rgb)),
+    rgb(var(--dark-pink-rgb))
   );
   height: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
 
 #star-pattern {
-  background-image: "./images/kh_icon.png";
+  background-image: url("./images/kh_icon.png");
   background-size: 10%;
   position: absolute;
   left: 50%;
@@ -29,7 +48,7 @@
   height: 100%;
   width: 100%;
   min-width: 1200px;
-  opacity: 0.10;
+  opacity: 0.20;
   animation: pan 180s linear infinite;
   will-change: background-position;
 }
@@ -37,8 +56,8 @@
 #star-gradient-overlay {
   background: radial-gradient(
     circle,
-    transparent 75%,
-    rgb(var(--dark-gold-rgb))
+    transparent 80%,
+    rgb(var(--dark-pink-rgb))
   );
   position: absolute;
   left: 0px;

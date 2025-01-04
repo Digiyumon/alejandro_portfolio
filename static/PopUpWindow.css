@@ -1,0 +1,32 @@
+/* Styling the draggable window */
+.draggable-window {
+  z-index: 10;
+  left: 0px;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background-color: #f4f4f4;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: move;
+  overflow: hidden;
+}
+
+/* Header for dragging */
+.window-header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  cursor: grab;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Window content */
+.window-content {
+  padding: 15px;
+}

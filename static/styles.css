@@ -8,9 +8,9 @@
 }
 
 body {
-  /*background: white;*/
+  background: white;
   color: gray;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -22,7 +22,21 @@ span {
   color: lightpink;
 }
 
+#card-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 7%;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  padding: 2rem;
+}
+
 .card {
+  background-color: floralwhite;
   border: 1px solid #424242;
   box-shadow:
     0 0.5em 1em -0.125em hsla(0, 0%, 4%, 0.1),
@@ -35,6 +49,7 @@ span {
   justify-content: center;
   align-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 #center-text h1 {
