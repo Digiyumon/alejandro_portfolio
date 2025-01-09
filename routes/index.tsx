@@ -45,9 +45,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <PopUpWindow>
-          <p>this is a test</p>
-        </PopUpWindow>
+        <PopUpWindow />
       </div>
     </body>
   );
