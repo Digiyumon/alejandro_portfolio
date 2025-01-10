@@ -1,6 +1,8 @@
 import IconButton from "../islands/IconButton.tsx";
 import PopUpWindow from "../islands/PopUpWindow.tsx";
 
+//todo: whenever the user hovers over Alejandro, then it will fade in the text, "you can call me al :)"
+
 export default function Home() {
   return (
     <body>
@@ -30,16 +32,19 @@ export default function Home() {
                   image={"./images/about_me.png"}
                   text={"about"}
                   alt={"about"}
+                  target_window="about-window"
                 />
                 <IconButton
                   image={"./images/work.png"}
                   text={"work"}
                   alt={"work"}
+                  target_window="work-window"
                 />
                 <IconButton
                   image={"./images/contact.png"}
                   text={"contact"}
                   alt={"contact"}
+                  target_window="contact-window"
                 />
               </div>
             </div>

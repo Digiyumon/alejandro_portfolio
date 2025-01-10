@@ -1,116 +1,87 @@
 import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect } from "preact/hooks";
 
-/*const PopUpWindow = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
+//Todo: focus on actually making the window instead of the draggable feature
+//Todo: make the window draggable with the mouse
+//Todo: change the sound that exiting the window makes
 
-  const onMouseDown = (e: MouseEvent) => {
-    setIsDragging(true);
-    const startX = e.clientX - position.x;
-    const startY = e.clientY - position.y;
-
-    const onMouseMove = (moveEvent: MouseEvent) => {
-      if (!isDragging) return;
-      debugger;
-      setPosition({
-        x: moveEvent.clientX - startX,
-        y: moveEvent.clientY - startY,
-      });
-    };
-
-    const onMouseUp = () => {
-      setIsDragging(false);
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseup", onMouseUp);
-    };
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-  };
-
-  return (
-    <div
-      onMouseDown={onMouseDown}
-      style={{
-        position: "absolute",
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        width: "100px",
-        height: "100px",
-        backgroundColor: "skyblue",
-        cursor: "move",
-        borderRadius: "8px",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-    </div>
-  );
+const playSound = () => {
+  const audio = new Audio("/audio/new-click.mp3");
+  audio.loop = false;
+  audio.play();
 };
 
-export default PopUpWindow;
-*/
+const set_hidden = () => {
+  const target = document.getElementById("about-window");
+  if (target?.classList.contains("not-hidden")) {
+    target.classList.remove("not-hidden");
+    setTimeout(() => {
+      target.classList.add("hidden");
+    }, 5);
+  }
+};
 
 const PopUpWindow = () => {
-  useEffect(() => {
-    let newX = 0;
-    let newY = 0;
-    let startX = 0;
-    let startY = 0;
+  let newX: number = 0;
+  let newY: number = 0;
+  let startX: number = 0;
+  let startY: number = 0;
+  let currentElement: HTMLElement | null = null;
 
-    const aboutWindow = document.getElementById("about-window");
-    if (!aboutWindow) return;
+  const onMouseDown = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    // Only start dragging if the clicked element has the class "draggable-window"
+    if (!target.classList.contains("draggable-window")) return;
 
-    const onMouseDown = (e: MouseEvent) => {
-      startX = e.clientX;
-      startY = e.clientY;
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
-    };
+    currentElement = target;
+    startX = e.clientX;
+    startY = e.clientY;
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      newX = startX - e.clientX;
-      newY = startY - e.clientY;
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!currentElement) return;
 
-      startX = e.clientX;
-      startY = e.clientY;
+    console.log("test");
 
-      if (aboutWindow) {
-        aboutWindow.style.top = `${aboutWindow.offsetTop - newY}px`;
-        aboutWindow.style.left = `${aboutWindow.offsetLeft - newX}px`;
-      }
-    };
+    newX = startX - e.clientX;
+    newY = startY - e.clientY;
 
-    const handleMouseUp = () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
+    startX = e.clientX;
+    startY = e.clientY;
 
-    aboutWindow.addEventListener("mousedown", onMouseDown);
+    currentElement.style.top = `${currentElement.offsetTop - newY}px`;
+    currentElement.style.left = `${currentElement.offsetLeft - newX}px`;
+  };
 
-    // Cleanup event listeners on unmount
-    return () => {
-      aboutWindow.removeEventListener("mousedown", onMouseDown);
-    };
-  }, []);
+  const handleMouseUp = () => {
+    document.removeEventListener("mousemove", handleMouseMove);
+    currentElement = null;
+  };
 
+  //the not-opened class is so that we avoid the hidden animation playing when the window is first opened
   return (
-    <div
-      id="about-window"
-      style={{
-        position: "absolute",
-        left: "100px",
-        top: "100px",
-        width: "200px",
-        height: "150px",
-        backgroundColor: "skyblue",
-        cursor: "grab",
-        borderRadius: "8px",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        userSelect: "none",
-      }}
-    >
-      <p>Drag Me!</p>
+    <div id="about-window" class="hidden not-opened">
+      <div class="window-header draggable-window" onMousedown={onMouseDown}>
+        <p class="window-title">about</p>
+        <button
+          class="close-button"
+          onClick={() => {
+            playSound();
+            set_hidden();
+          }}
+        >
+          |x|
+        </button>
+      </div>
+      <div className="window-content">
+        <div>
+          <figure>
+            <img src="/images/me 2.jpg" alt="about" />
+          </figure>
+        </div>
+      </div>
     </div>
   );
 };
