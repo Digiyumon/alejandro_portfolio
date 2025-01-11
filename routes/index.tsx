@@ -15,8 +15,7 @@ export default function Home() {
           <div id="stripe-pattern"></div>
         </div>
         <div id="card-container">
-          <div class={"card"}>
-            <div class={"black-nav-bar"}></div>
+          <div class={"ff7"}>
             <div className={"container"}>
               <div id={"center-text"}>
                 <h3>

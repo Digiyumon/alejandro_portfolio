@@ -62,7 +62,7 @@ const PopUpWindow = () => {
 
   //the not-opened class is so that we avoid the hidden animation playing when the window is first opened
   return (
-    <div id="about-window" class="hidden not-opened">
+    <div id="about-window" class="hidden not-opened ff7">
       <div class="window-header draggable-window" onMousedown={onMouseDown}>
         <p class="window-title">about</p>
         <button
