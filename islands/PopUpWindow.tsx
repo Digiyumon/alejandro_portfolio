@@ -5,6 +5,9 @@ import { useEffect } from "preact/hooks";
 //Todo: make the window draggable with the mouse
 //Todo: change the sound that exiting the window makes
 
+//i'm thinking maybe for the about me, we can format it like a ff7 screen
+//where we have my photo and the stats and everything like that
+
 const playSound = () => {
   const audio = new Audio("/audio/new-click.mp3");
   audio.loop = false;
@@ -62,8 +65,8 @@ const PopUpWindow = () => {
 
   //the not-opened class is so that we avoid the hidden animation playing when the window is first opened
   return (
-    <div id="about-window" class="hidden not-opened">
-      <div class="window-header draggable-window" onMousedown={onMouseDown}>
+    <div id="about-window" class="hidden not-opened draggable-window">
+      <div class="window-header" onMousedown={onMouseDown}>
         <p class="window-title">about</p>
         <button
           class="close-button"
@@ -72,14 +75,38 @@ const PopUpWindow = () => {
             set_hidden();
           }}
         >
-          |x|
+          <span>|x|</span>
         </button>
       </div>
       <div className="window-content">
         <div>
           <figure>
-            <img src="/images/me 2.jpg" alt="about" />
+            <img src="/images/me 2.jpg" alt="about" class="about-image" />
           </figure>
+          <p>Alejandro Ojeda-Celis</p>
+        </div>
+        <hr />
+        <div>
+          <p>
+            hey there, I'm alejandro, a recent college graduate and aspiring
+            game developer
+          </p>
+          <br />
+          <div id="education">
+            <h1>Education</h1>
+            <h3>
+              Bachelors of Computer Science
+            </h3>
+            <p>University of Texas at Arlington</p>
+          </div>
+          <div>
+            Interests
+            <ul>
+              <li>Gaming</li>
+              <li>Modeling</li>
+              <li>Coding</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

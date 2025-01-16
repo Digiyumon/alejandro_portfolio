@@ -7,6 +7,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $IconButton from "./islands/IconButton.tsx";
 import * as $PopUpWindow from "./islands/PopUpWindow.tsx";
+import * as $workWindow from "./islands/workWindow.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -18,6 +19,7 @@ const manifest = {
   islands: {
     "./islands/IconButton.tsx": $IconButton,
     "./islands/PopUpWindow.tsx": $PopUpWindow,
+    "./islands/workWindow.tsx": $workWindow,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

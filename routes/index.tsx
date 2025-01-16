@@ -1,5 +1,6 @@
 import IconButton from "../islands/IconButton.tsx";
 import PopUpWindow from "../islands/PopUpWindow.tsx";
+import WorkWindow from "../islands/workWindow.tsx";
 
 //todo: whenever the user hovers over Alejandro, then it will fade in the text, "you can call me al :)"
 
@@ -51,6 +52,7 @@ export default function Home() {
           </div>
         </div>
         <PopUpWindow />
+        <WorkWindow />
       </div>
     </body>
   );

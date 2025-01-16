@@ -23,12 +23,18 @@
   justify-content: center;
   position: absolute;
   width: 50%;
-  height: 50%;
+  height: 70%;
   background-color: #f4f4f4;
   border: 2px solid #333;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#about-window * {
+  font-family: "Dongle";
+  font-size: xx-large;
 }
 
 .window-title {
@@ -41,6 +47,9 @@
 
 .close-button {
   cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 20px;
 }
 
 @keyframes shrink {
@@ -75,4 +84,13 @@
 
 #about-window.hidden.not-opened {
   display: none;
+}
+
+.about-image {
+  width: 200;
+  height: 200px;
+}
+
+#education h1 {
+  font-size: 50px;
 }
