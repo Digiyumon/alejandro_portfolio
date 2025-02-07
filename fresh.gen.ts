@@ -5,6 +5,7 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $DraggableBar from "./islands/DraggableBar.tsx";
 import * as $IconButton from "./islands/IconButton.tsx";
 import * as $PopUpWindow from "./islands/PopUpWindow.tsx";
 import * as $workWindow from "./islands/workWindow.tsx";
@@ -17,6 +18,7 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
+    "./islands/DraggableBar.tsx": $DraggableBar,
     "./islands/IconButton.tsx": $IconButton,
     "./islands/PopUpWindow.tsx": $PopUpWindow,
     "./islands/workWindow.tsx": $workWindow,

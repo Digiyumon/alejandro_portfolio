@@ -1,6 +1,5 @@
-// okay so i think it'd be cool to do something similar to sharyaps work window where whenever you hover over the thing it makes a sound
-/* but instead of it being some random note, i want it to be the main melody of dearly beloved, so after every hover it will play the next note in the
-main melody, I HAVE NO IDEA HOW TO MAKE IT WORK but we will figure it out. */
+import { h } from "preact";
+import DraggableCard from "../islands/DraggableBar.tsx";
 
 const playSound = () => {
   const audio = new Audio("/audio/new-click.mp3");
@@ -9,7 +8,7 @@ const playSound = () => {
 };
 
 const set_hidden = () => {
-  const target = document.getElementById("work-window");
+  const target = document.getElementById("about-window");
   if (target?.classList.contains("not-hidden")) {
     target.classList.remove("not-hidden");
     setTimeout(() => {
@@ -17,18 +16,26 @@ const set_hidden = () => {
     }, 5);
   }
 };
-const WorkWindow = () => {
+
+const App = () => {
   return (
-    <div id="work-window" class="not-hidden">
-      <div class="window-header">
-        <h2>Work</h2>
-        <button onClick={set_hidden}>X</button>
+    <DraggableCard>
+      <div id="work-window" class="not-hidden">
+        <div class="window-header">
+          <p class="window-title">about</p>
+          <button
+            class="close-button"
+            onClick={() => {
+              playSound();
+              set_hidden();
+            }}
+          >
+            <span>|x|</span>
+          </button>
+        </div>
       </div>
-      <div class="window-content">
-        <p>Work</p>
-      </div>
-    </div>
+    </DraggableCard>
   );
 };
 
-export default WorkWindow;
+export default App;
