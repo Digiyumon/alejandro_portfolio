@@ -1,8 +1,14 @@
 import { h } from "preact";
 import { useEffect, useRef } from "preact/hooks";
 
+//TODO: fix it to where the closing button doesn't close other windows, and only the window it's associated with
+
 const DraggableCard = (
-  { children }: { children: preact.ComponentChildren },
+  { children, id, className }: {
+    children: preact.ComponentChildren;
+    id: string;
+    className: string;
+  },
 ) => {
   const cardRef = useRef<HTMLDivElement>(null);
   let newX = 0, newY = 0, startX = 0, startY = 0;
@@ -17,12 +23,14 @@ const DraggableCard = (
 
   const handleMouseDown = (e: MouseEvent) => {
     if (!cardRef.current) return;
+    const target = e.target as HTMLElement;
+    if (target.classList.contains("window-header")) {
+      startX = e.clientX;
+      startY = e.clientY;
 
-    startX = e.clientX;
-    startY = e.clientY;
-
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+    }
   };
 
   const handleMouseMove = (e: MouseEvent) => {
@@ -44,7 +52,12 @@ const DraggableCard = (
   };
 
   return (
-    <div class="draggable-bar" ref={cardRef} onMouseDown={handleMouseDown}>
+    <div
+      class={className}
+      ref={cardRef}
+      onMouseDown={handleMouseDown}
+      id={id}
+    >
       <div>{children}</div>
     </div>
   );

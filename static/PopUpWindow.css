@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 
 /* Window content */
@@ -16,12 +17,12 @@
 }
 
 #about-window {
+  position: fixed;
   z-index: 10;
   left: 0px;
   top: 0px;
   align-items: center;
   justify-content: center;
-  position: absolute;
   width: 50%;
   height: 70%;
   background-color: #f4f4f4;
@@ -34,13 +35,13 @@
 
 #work-window {
   z-index: 10;
-  left: 0px;
-  top: 0px;
+  top: 15%;
+  left: 20%;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 50%;
-  height: 70%;
+  height: 50%;
   background-color: #f4f4f4;
   border: 2px solid #333;
   border-radius: 8px;
@@ -100,6 +101,10 @@
 }
 
 #about-window.hidden.not-opened {
+  display: none;
+}
+
+#work-window.hidden.not-opened {
   display: none;
 }
 

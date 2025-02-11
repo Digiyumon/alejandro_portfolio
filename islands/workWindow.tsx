@@ -8,7 +8,7 @@ const playSound = () => {
 };
 
 const set_hidden = () => {
-  const target = document.getElementById("about-window");
+  const target = document.getElementById("work-window");
   if (target?.classList.contains("not-hidden")) {
     target.classList.remove("not-hidden");
     setTimeout(() => {
@@ -19,20 +19,24 @@ const set_hidden = () => {
 
 const App = () => {
   return (
-    <DraggableCard>
-      <div id="work-window" class="not-hidden">
-        <div class="window-header">
-          <p class="window-title">about</p>
-          <button
-            class="close-button"
-            onClick={() => {
-              playSound();
-              set_hidden();
-            }}
-          >
-            <span>|x|</span>
-          </button>
-        </div>
+    <DraggableCard
+      id={"work-window"}
+      className="draggable-bar hidden not-opened"
+    >
+      <div class="window-header">
+        <p class="window-title">work</p>
+        <button
+          class="close-button"
+          onClick={() => {
+            playSound();
+            set_hidden();
+          }}
+        >
+          <span>|x|</span>
+        </button>
+      </div>
+      <div class="window-content">
+        <h1>work</h1>
       </div>
     </DraggableCard>
   );
