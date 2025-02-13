@@ -34,18 +34,21 @@ export default function Home() {
                   text={"about"}
                   alt={"about"}
                   target_window="about-window"
+                  sound={"./audio/kh about.mp3"}
                 />
                 <IconButton
                   image={"./images/work.png"}
                   text={"work"}
                   alt={"work"}
                   target_window="work-window"
+                  sound={"./audio/new-click.mp3"}
                 />
                 <IconButton
                   image={"./images/contact.png"}
                   text={"contact"}
                   alt={"contact"}
                   target_window="contact-window"
+                  sound={"./audio/new-click.mp3"}
                 />
               </div>
             </div>

@@ -1,5 +1,6 @@
-const playSound = () => {
-  const audio = new Audio("/audio/new-click.mp3");
+const playSound = (sound: string) => {
+  //debugger;
+  const audio = new Audio(sound);
   audio.loop = false;
   audio.play();
 };
@@ -20,6 +21,7 @@ interface IconButtonProps {
   text: string;
   alt: string;
   target_window: string;
+  sound: string;
 }
 
 export default function IconButton(
@@ -29,7 +31,7 @@ export default function IconButton(
     <button
       className="iconbutton"
       onClick={() => {
-        playSound();
+        playSound(props.sound);
         openWindow(props.target_window);
       }}
     >

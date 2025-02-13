@@ -1,16 +1,15 @@
-import { h } from "preact";
-import { useEffect } from "preact/hooks";
 import DraggableCard from "./DraggableBar.tsx";
+import ProgressBar from "./ProgressBar.tsx";
 
-//TODO: change the sound that exiting the window makes to ff7
-//TODO: change the sound that opening the window makes to ff7
+//TODO: make it to where the age automatically updates whenever the birthday is reached
 //FIXME: the dragging component isn't working for some reason
+//FIXME: the window flickers back when it's closed for some reason
 
 //i'm thinking maybe for the about me, we can format it like a ff7 screen
 //where we have my photo and the stats and everything like that
 
 const playSound = () => {
-  const audio = new Audio("/audio/new-click.mp3");
+  const audio = new Audio("/audio/003.mp3");
   audio.loop = false;
   audio.play();
 };
@@ -66,6 +65,7 @@ const PopUpWindow = () => {
               <p>
                 next level
               </p>
+              <ProgressBar />
             </div>
           </div>
         </div>
