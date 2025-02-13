@@ -24,7 +24,10 @@ const DraggableCard = (
   const handleMouseDown = (e: MouseEvent) => {
     if (!cardRef.current) return;
     const target = e.target as HTMLElement;
-    if (target.classList.contains("window-header")) {
+    if (
+      target.classList.contains("window-header") ||
+      target.classList.contains("ff7-window-header")
+    ) {
       startX = e.clientX;
       startY = e.clientY;
 

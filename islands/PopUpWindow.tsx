@@ -1,9 +1,10 @@
 import { h } from "preact";
 import { useEffect } from "preact/hooks";
+import DraggableCard from "./DraggableBar.tsx";
 
-//Todo: focus on actually making the window instead of the draggable feature
-//Todo: make the window draggable with the mouse
-//Todo: change the sound that exiting the window makes
+//TODO: change the sound that exiting the window makes to ff7
+//TODO: change the sound that opening the window makes to ff7
+//FIXME: the dragging component isn't working for some reason
 
 //i'm thinking maybe for the about me, we can format it like a ff7 screen
 //where we have my photo and the stats and everything like that
@@ -25,48 +26,13 @@ const set_hidden = () => {
 };
 
 const PopUpWindow = () => {
-  let newX: number = 0;
-  let newY: number = 0;
-  let startX: number = 0;
-  let startY: number = 0;
-  let currentElement: HTMLElement | null = null;
-
-  const onMouseDown = (e: MouseEvent) => {
-    const target = e.target as HTMLElement;
-    // Only start dragging if the clicked element has the class "draggable-window"
-    if (!target.classList.contains("draggable-window")) return;
-
-    currentElement = target;
-    startX = e.clientX;
-    startY = e.clientY;
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!currentElement) return;
-
-    console.log("test");
-
-    newX = startX - e.clientX;
-    newY = startY - e.clientY;
-
-    startX = e.clientX;
-    startY = e.clientY;
-
-    currentElement.style.top = `${currentElement.offsetTop - newY}px`;
-    currentElement.style.left = `${currentElement.offsetLeft - newX}px`;
-  };
-
-  const handleMouseUp = () => {
-    document.removeEventListener("mousemove", handleMouseMove);
-    currentElement = null;
-  };
-
   //the not-opened class is so that we avoid the hidden animation playing when the window is first opened
   return (
-    <div id="about-window" class="hidden not-opened draggable-window">
-      <div class="window-header" onMousedown={onMouseDown}>
+    <DraggableCard
+      id={"about-window"}
+      className="draggable-bar hidden not-opened ff7"
+    >
+      <div class="ff7-window-header">
         <p class="window-title">about</p>
         <button
           class="close-button"
@@ -79,11 +45,29 @@ const PopUpWindow = () => {
         </button>
       </div>
       <div className="window-content">
-        <div>
+        <div class="row">
           <figure>
             <img src="/images/me 2.jpg" alt="about" class="about-image" />
           </figure>
-          <p>Alejandro Ojeda-Celis</p>
+          <div class="stat-text">
+            <p>Alejandro Ojeda-Celis</p>
+            <p>
+              <span class="stat-label">LV</span> 22
+            </p>
+            <p>
+              <span class="stat-label">HP</span> 13/13
+            </p>
+            <p>
+              <span class="stat-label">MP</span> 10/10
+            </p>
+          </div>
+          <div class="stat-bars">
+            <div class="next-level">
+              <p>
+                next level
+              </p>
+            </div>
+          </div>
         </div>
         <hr />
         <div>
@@ -109,7 +93,7 @@ const PopUpWindow = () => {
           </div>
         </div>
       </div>
-    </div>
+    </DraggableCard>
   );
 };
 
