@@ -2,11 +2,9 @@ import DraggableCard from "./DraggableBar.tsx";
 import ProgressBar from "./ProgressBar.tsx";
 
 //TODO: make it to where the age automatically updates whenever the birthday is reached
+//TODO: add a list of your hobbies and what you like to do (similar to what kevin said to do for your resume)
 //FIXME: the dragging component isn't working for some reason
 //FIXME: the window flickers back when it's closed for some reason
-
-//i'm thinking maybe for the about me, we can format it like a ff7 screen
-//where we have my photo and the stats and everything like that
 
 const playSound = () => {
   const audio = new Audio("/audio/003.mp3");

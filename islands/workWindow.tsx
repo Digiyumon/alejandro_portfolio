@@ -1,5 +1,6 @@
 import { h } from "preact";
 import DraggableCard from "../islands/DraggableBar.tsx";
+import MusicalTag from "./MusicalTag.tsx";
 
 const playSound = () => {
   const audio = new Audio("/audio/new-click.mp3");
@@ -36,7 +37,14 @@ const App = () => {
         </button>
       </div>
       <div class="window-content">
-        <h1>work</h1>
+        <div id="work-window-tools">
+          <h2>tools</h2>
+          <MusicalTag />
+        </div>
+        <hr />
+        <div id="work-window-projects">
+          <p>coming soon</p>
+        </div>
       </div>
     </DraggableCard>
   );

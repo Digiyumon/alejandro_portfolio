@@ -1,4 +1,3 @@
-import { h } from "preact";
 import { useEffect, useRef } from "preact/hooks";
 
 //TODO: fix it to where the closing button doesn't close other windows, and only the window it's associated with
