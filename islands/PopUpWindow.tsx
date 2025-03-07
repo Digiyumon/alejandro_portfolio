@@ -2,12 +2,11 @@ import DraggableCard from "./DraggableBar.tsx";
 import ProgressBar from "./ProgressBar.tsx";
 
 //TODO: make it to where the age automatically updates whenever the birthday is reached
-//TODO: add a list of your hobbies and what you like to do (similar to what kevin said to do for your resume)
-//FIXME: the dragging component isn't working for some reason
-//FIXME: the window flickers back when it's closed for some reason
+//TODO: add a list of your hobbies and what you like to do (similar to what kevin said to do for your resume)(mention pixel art and how the pixel art on the page was made by you)
+//TODO: if another window is being dragged, it should be on top of the other windows
 
 const playSound = () => {
-  const audio = new Audio("/audio/003.mp3");
+  const audio = new Audio("/audio/FFCloseMenu.mp3");
   audio.loop = false;
   audio.play();
 };
@@ -16,9 +15,7 @@ const set_hidden = () => {
   const target = document.getElementById("about-window");
   if (target?.classList.contains("not-hidden")) {
     target.classList.remove("not-hidden");
-    setTimeout(() => {
-      target.classList.add("hidden");
-    }, 5);
+    target.classList.add("hidden");
   }
 };
 

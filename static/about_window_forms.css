@@ -1,0 +1,32 @@
+.contact-inputs {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.contact-window-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+}
+
+.contact-window-form {
+  display: flex;
+}
+
+.work-email {
+  font-family: "Dongle";
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  border: 2px solid pink;
+  outline: none;
+}
+
+textarea:focus {
+  border: 2px solid pink;
+  outline: none;
+}

@@ -1,4 +1,3 @@
-import { h } from "preact";
 import DraggableCard from "../islands/DraggableBar.tsx";
 import MusicalTag from "./MusicalTag.tsx";
 
@@ -12,9 +11,7 @@ const set_hidden = () => {
   const target = document.getElementById("work-window");
   if (target?.classList.contains("not-hidden")) {
     target.classList.remove("not-hidden");
-    setTimeout(() => {
-      target.classList.add("hidden");
-    }, 5);
+    target.classList.add("hidden");
   }
 };
 
@@ -43,6 +40,7 @@ const App = () => {
         </div>
         <hr />
         <div id="work-window-projects">
+          <h2>projects</h2>
           <p>coming soon</p>
         </div>
       </div>

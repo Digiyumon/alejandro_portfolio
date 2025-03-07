@@ -56,7 +56,22 @@
   width: 50%;
   height: 50%;
   background-color: #f4f4f4;
-  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#contact-window {
+  position: fixed;
+  z-index: 10;
+  left: 40%;
+  top: 16%;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 70%;
+  background-color: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
@@ -117,13 +132,17 @@
   animation: grow 0.5s forwards;
 }
 
-/* ----------------------making sure things don't show on load---------------------- */
+/* ----------------------making sure windows don't show on load---------------------- */
 
 #about-window.hidden.not-opened {
   display: none;
 }
 
 #work-window.hidden.not-opened {
+  display: none;
+}
+
+#contact-window.hidden.not-opened {
   display: none;
 }
 /* ----------------------about image styling---------------------- */
@@ -151,7 +170,6 @@
     0 2px #424542;
   width: 500px;
   padding: 5px 10px;
-  margin: 50px 50px;
 
   background: #04009d;
   background: -moz-linear-gradient(top, #04009d 0%, #06004d 100%);

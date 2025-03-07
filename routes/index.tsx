@@ -1,3 +1,4 @@
+import ContactWindow from "../islands/ContactWindow.tsx";
 import IconButton from "../islands/IconButton.tsx";
 import PopUpWindow from "../islands/PopUpWindow.tsx";
 import WorkWindow from "../islands/workWindow.tsx";
@@ -56,6 +57,7 @@ export default function Home() {
         </div>
         <PopUpWindow />
         <WorkWindow />
+        <ContactWindow />
       </div>
     </body>
   );
