@@ -16,12 +16,19 @@ const openWindow = (target_window: string) => {
   }
 };
 
+const clearInputFields = () => {
+  const form = document.forms.namedItem("submit-to-email") as HTMLFormElement;
+  form.reset();
+  console.log("should've done it");
+};
+
 interface IconButtonProps {
   image: string;
   text: string;
   alt: string;
   target_window: string;
   sound: string;
+  isContactWindow: boolean;
 }
 
 export default function IconButton(
@@ -33,6 +40,9 @@ export default function IconButton(
       onClick={() => {
         playSound(props.sound);
         openWindow(props.target_window);
+        if (props.isContactWindow) {
+          clearInputFields();
+        }
       }}
     >
       <img src={props.image} alt={props.alt} />

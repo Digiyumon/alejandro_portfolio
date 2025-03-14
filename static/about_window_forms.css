@@ -1,32 +1,80 @@
-.contact-inputs {
+/* Aligns form elements in a row */
+.contact-window-form {
   display: flex;
-  flex-direction: horizontal;
+  gap: 20px;
+  align-items: flex-start;
 }
 
+/* Styles for the input fields */
 .contact-window-inputs {
   display: flex;
   flex-direction: column;
-  padding: 0px 0px;
+  gap: 15px;
+  width: 250px;
 }
 
-.contact-window-form {
-  display: flex;
+.window-input,
+.contact-window-message {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  background: white;
+  transition: border 0.3s ease;
 }
 
-.work-email {
-  font-family: "Dongle";
-  font-size: 50px;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-}
-
-input:focus {
-  border: 2px solid pink;
-  outline: none;
-}
-
+/* Focus styles for input and textarea */
+input:focus,
 textarea:focus {
-  border: 2px solid pink;
+  border: 2px solid pink; /* Light pink border */
   outline: none;
+}
+
+/* Textarea message box styling */
+.contact-window-message {
+  min-height: 120px;
+  resize: none;
+  width: 95%;
+  height: 100%;
+}
+
+/* Styles for required field message */
+input:invalid + .error-message,
+textarea:invalid + .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Styles for the button */
+.contact-window-button {
+  background-color: pink;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 120px;
+  align-self: flex-end;
+  margin-right: 15px;
+}
+
+.contact-window-button:hover {
+  background-color: plum;
+}
+
+.message-and-button {
+  width: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-email:hover {
+  background-color: powderblue;
 }

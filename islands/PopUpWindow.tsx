@@ -4,6 +4,7 @@ import ProgressBar from "./ProgressBar.tsx";
 //TODO: make it to where the age automatically updates whenever the birthday is reached
 //TODO: add a list of your hobbies and what you like to do (similar to what kevin said to do for your resume)(mention pixel art and how the pixel art on the page was made by you)
 //TODO: if another window is being dragged, it should be on top of the other windows
+//TODO: make sure the form sends for hte contact window
 
 const playSound = () => {
   const audio = new Audio("/audio/FFCloseMenu.mp3");
@@ -70,6 +71,12 @@ const PopUpWindow = () => {
             hey there, I'm alejandro, a recent college graduate and aspiring
             game developer
           </p>
+          <a
+            href="./resume/Alejandro Ojeda-Celis MLT Resume With Changs and Interests.pdf"
+            target="_blank"
+          >
+            resume
+          </a>
           <br />
           <div id="education">
             <h1>Education</h1>

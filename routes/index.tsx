@@ -36,6 +36,7 @@ export default function Home() {
                   alt={"about"}
                   target_window="about-window"
                   sound={"./audio/kh about.mp3"}
+                  isContactWindow={false}
                 />
                 <IconButton
                   image={"./images/work.png"}
@@ -43,6 +44,7 @@ export default function Home() {
                   alt={"work"}
                   target_window="work-window"
                   sound={"./audio/new-click.mp3"}
+                  isContactWindow={false}
                 />
                 <IconButton
                   image={"./images/contact.png"}
@@ -50,6 +52,7 @@ export default function Home() {
                   alt={"contact"}
                   target_window="contact-window"
                   sound={"./audio/new-click.mp3"}
+                  isContactWindow={true}
                 />
               </div>
             </div>
