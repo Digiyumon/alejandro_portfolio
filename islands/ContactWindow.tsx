@@ -1,23 +1,9 @@
 import DraggableCard from "./DraggableBar.tsx";
 
-/*const send_form = () => {
-  const scriptURL = "";
-  const form = document.getElementById(
-    "submit-to-google-sheet",
-  ) as HTMLFormElement;
-  const msg = document.getElementById("message") as HTMLInputElement;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => console.log("Success!", response))
-      .catch((error) => console.error("Error!", error.message));
-  });
-};*/
-
 const playSound = () => {
-  const audio = new Audio("/audio/new-click.mp3");
+  const audio = new Audio("/audio/close_window.mp3");
   audio.loop = false;
+  audio.volume = 0.2;
   audio.play();
 };
 

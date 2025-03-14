@@ -79,3 +79,61 @@ span {
   height: 35px;
   border-radius: 10px 10px 0px 0px;
 }
+
+/* right now we just have the aqua color as a stand-in until we think of something else*/
+/*this is all code to make sure my website looks presentable in a smaller device, which is how most people are going to be viewing my website in the first place*/
+@media (max-width: 500px) {
+  #center-text {
+    color: aliceblue;
+  }
+  span {
+    color: pink;
+  }
+
+  .container {
+    padding: 0 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 40%;
+  }
+  #card-container {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    padding: 2rem;
+  }
+
+  .card {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    width: 100%;
+  }
+  .black-nav-bar {
+    background-color: transparent;
+  }
+  #center-text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #center-text h3 {
+    text-align: center;
+  }
+
+  #center-text p {
+    font-size: x-large;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons-container {
+    margin-left: -7%;
+  }
+}

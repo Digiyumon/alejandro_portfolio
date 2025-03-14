@@ -2,8 +2,9 @@ import DraggableCard from "../islands/DraggableBar.tsx";
 import MusicalTag from "./MusicalTag.tsx";
 
 const playSound = () => {
-  const audio = new Audio("/audio/new-click.mp3");
+  const audio = new Audio("/audio/close_window.mp3");
   audio.loop = false;
+  audio.volume = 0.2;
   audio.play();
 };
 

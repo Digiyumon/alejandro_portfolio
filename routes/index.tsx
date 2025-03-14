@@ -21,9 +21,6 @@ export default function Home() {
             <div class={"black-nav-bar"}></div>
             <div className={"container"}>
               <div id={"center-text"}>
-                <h3>
-                  but you can call me <span>al</span> :)
-                </h3>
                 <h1>
                   hi! i'm <span>Alejandro</span>
                 </h1>

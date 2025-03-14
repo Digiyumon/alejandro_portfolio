@@ -78,15 +78,17 @@ const PopUpWindow = () => {
             resume
           </a>
           <br />
-          <div id="education">
-            <h1>Education</h1>
+          <div>
+            <h1 class="about-page-headers">Education:</h1>
             <h3>
               Bachelors of Computer Science
             </h3>
             <p>University of Texas at Arlington</p>
           </div>
           <div>
-            Interests
+            <h1 class="about-page-headers">
+              Interests:
+            </h1>
             <ul>
               <li>Gaming</li>
               <li>Modeling</li>

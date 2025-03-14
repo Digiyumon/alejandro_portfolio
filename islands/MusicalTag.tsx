@@ -48,7 +48,14 @@ const App = () => {
   };
 
   return (
-    <div style={{ display: "flex", gap: "10px", padding: "20px" }}>
+    <div
+      style={{
+        display: "flex",
+        gap: "10px",
+        padding: "20px",
+        flexWrap: "wrap",
+      }}
+    >
       <HoverButton text="HTML/CSS" onHover={handleHover} />
       <HoverButton text="JavaScript" onHover={handleHover} />
       <HoverButton text="React/Preact" onHover={handleHover} />

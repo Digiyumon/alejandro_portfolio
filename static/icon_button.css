@@ -16,6 +16,24 @@
   font-size: x-large;
 }
 
+@media (max-width: 500px) {
+  .iconbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    transition: 0.25s;
+    font-family: "Dongle";
+    font-size: x-large;
+  }
+}
+
 .iconbutton:hover {
   background-color: #f0f0f0;
   transform: scale(1.1);

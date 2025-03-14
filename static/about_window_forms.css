@@ -78,3 +78,15 @@ textarea:invalid + .error-message {
 .work-email:hover {
   background-color: powderblue;
 }
+
+@media (max-width: 500px) {
+  .contact-window-message {
+    min-height: 120px;
+    resize: none;
+    width: 90%;
+    height: 100%;
+  }
+  .contact-window-button {
+    margin-right: -6px;
+  }
+}
