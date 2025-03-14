@@ -3,8 +3,6 @@ import IconButton from "../islands/IconButton.tsx";
 import PopUpWindow from "../islands/PopUpWindow.tsx";
 import WorkWindow from "../islands/workWindow.tsx";
 
-//todo: whenever the user hovers over Alejandro, then it will fade in the text, "you can call me al :)"
-
 export default function Home() {
   return (
     <body>
@@ -24,7 +22,7 @@ export default function Home() {
                 <h1>
                   hi! i'm <span>Alejandro</span>
                 </h1>
-                <p>modeler, developer and gamer</p>
+                <p>developer, programmer and gamer</p>
               </div>
               <div class={"buttons-container"}>
                 <IconButton

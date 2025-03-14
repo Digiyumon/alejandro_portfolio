@@ -75,24 +75,33 @@ const PopUpWindow = () => {
             href="./resume/Alejandro Ojeda-Celis MLT Resume With Changs and Interests.pdf"
             target="_blank"
           >
-            resume
+            my resume
           </a>
           <br />
           <div>
-            <h1 class="about-page-headers">Education:</h1>
-            <h3>
-              Bachelors of Computer Science
-            </h3>
-            <p>University of Texas at Arlington</p>
+            <h1 class="about-page-headers" id="education">
+              Education:
+              <h3 id="school">
+                University of Texas at Arlington
+              </h3>
+              <p id="degree">
+                - Bachelors of Computer Science
+                <p id="graduation-date">August 2024</p>
+              </p>
+            </h1>
           </div>
+          <hr />
           <div>
             <h1 class="about-page-headers">
               Interests:
             </h1>
-            <ul>
-              <li>Gaming</li>
-              <li>Modeling</li>
-              <li>Coding</li>
+            <ul id="interests">
+              <li>Rock-Climbing</li>
+              <li>3D Modeling</li>
+              <li>Game-Development</li>
+              <li>Fighting Games</li>
+              <li>Magic The Gathering</li>
+              <li>Playing the Piano/Cello</li>
             </ul>
           </div>
         </div>

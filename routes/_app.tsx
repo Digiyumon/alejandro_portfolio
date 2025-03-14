@@ -5,7 +5,7 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Badass Portfolio</title>
+        <title>Al's portfolio</title>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="/icon_button.css" />
         <link rel="stylesheet" href="/PopUpWindow.css" />

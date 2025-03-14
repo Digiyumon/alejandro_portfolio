@@ -214,6 +214,26 @@
   align-items: center;
 }
 
+/*-------------------education text adjustment-----------------*/
+
+#school {
+  font-size: 60px;
+  margin-top: -30px;
+}
+
+#degree {
+  font-size: 40px;
+  margin-top: -35px;
+}
+
+#graduation-date {
+  margin-top: -30px;
+  margin-left: 20px;
+}
+
+/*---------------adjusting the font size of interests--------*/
+
+/*---------------------------------adjusting for smaller screens*/
 @media (max-width: 500px) {
   .about-image {
     width: 100px;
@@ -266,5 +286,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
     overflow-x: hidden;
+  }
+
+  #school {
+    font-size: 35px;
+  }
+  #degree {
+    font-size: 30px;
+    margin-top: -25px;
+  }
+  #graduation-date {
+    margin-top: -25px;
   }
 }
