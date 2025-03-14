@@ -62,6 +62,7 @@ const App = () => {
       <HoverButton text="Java" onHover={handleHover} />
       <HoverButton text="Python" onHover={handleHover} />
       <HoverButton text="C#" onHover={handleHover} />
+      <HoverButton text="C++" onHover={handleHover} />
     </div>
   );
 };

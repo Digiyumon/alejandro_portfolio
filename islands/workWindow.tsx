@@ -42,7 +42,8 @@ const App = () => {
         <hr />
         <div id="work-window-projects">
           <h2>projects</h2>
-          <p>coming soon</p>
+          <p>THIS WEBSITE!</p>
+          <p>As well as anything else on my github, with more coming soon!</p>
         </div>
       </div>
     </DraggableCard>

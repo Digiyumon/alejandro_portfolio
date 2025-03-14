@@ -97,11 +97,12 @@ const PopUpWindow = () => {
             </h1>
             <ul id="interests">
               <li>Rock-Climbing</li>
+              <li>Film Photography</li>
               <li>3D Modeling</li>
               <li>Game-Development</li>
+              <li>Playing the Piano/Cello</li>
               <li>Fighting Games</li>
               <li>Magic The Gathering</li>
-              <li>Playing the Piano/Cello</li>
             </ul>
           </div>
         </div>
