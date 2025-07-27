@@ -47,7 +47,7 @@ const PopUpWindow = () => {
           <div class="stat-text">
             <p>Alejandro Ojeda-Celis</p>
             <p>
-              <span class="stat-label">LV</span> 22
+              <span class="stat-label">LV</span> 23
             </p>
             <p>
               <span class="stat-label">HP</span> 13/13
@@ -68,11 +68,11 @@ const PopUpWindow = () => {
         <hr />
         <div>
           <p>
-            hey there, I'm alejandro, a recent college graduate and aspiring
-            game developer
+            hey there, I'm Alejandro, a recent college graduate and aspiring
+            Game Developer / Data Scientist
           </p>
           <a
-            href="./resume/Alejandro Ojeda-Celis MLT Resume With Changs and Interests.pdf"
+            href="./resume/Alejandro Ojeda-Celis Data resume.pdf"
             target="_blank"
           >
             my resume
