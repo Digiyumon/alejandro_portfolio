@@ -47,7 +47,7 @@ const PopUpWindow = () => {
           <div class="stat-text">
             <p>Alejandro Ojeda-Celis</p>
             <p>
-              <span class="stat-label">LV</span> 23
+              <span class="stat-label">LV</span> 24
             </p>
             <p>
               <span class="stat-label">HP</span> 13/13
@@ -68,7 +68,7 @@ const PopUpWindow = () => {
         <hr />
         <div>
           <p>
-            hey there, I'm Alejandro, a recent college graduate and aspiring
+            hey there, I'm Alejandro, a college graduate and aspiring
             Game Developer / Data Scientist
           </p>
           <a

@@ -50,7 +50,7 @@ const App = () => {
           <div>
             <a
               href={"https://github.com/Digiyumon/Speedrun.com_api_python_cli"}
-              style="font-size: 2em; font-weight: bold; margin: 0.67em 0; display: block; color: inherit;"
+              style="font-size: 2em; font-weight: bold; margin: 0.67em 0; display: block;"
               target={"_blank"}
             >
               Speedrun.com Data Export Tool
@@ -69,6 +69,36 @@ const App = () => {
               accomplished what this program sets out to do. Instead of needing
               to locate game IDs, categories, and variable parameters for a URL,
               you can use this tool to handle everything for you automatically.
+            </p>
+          </div>
+          <hr
+            style={"border: none; height: 1px; background-color: #ccc; opcacity: 0.5;"}
+          >
+          </hr>
+          <div>
+            <a
+              href={"https://github.com/Digiyumon/FightingGameReactionWebsite"}
+              style="font-size: 2em; font-weight: bold; margin: 0.67em 0; display: block;"
+              target={"_blank"}
+            >
+              Street Fighter Reaction Test Website
+            </a>
+            <p>
+              I originally made this due to a Maximillian Dood video that was
+              posted on YouTube In it there was discussion about reaction times
+              for Brian's snake edge in tekken. People were flocking to the
+              human benchmark reaction test website to see if they had the
+              reaction time for it.
+              <br />
+              However, as Max pointed out in the video, a binary reaction time
+              test is not really how fighting games are. There are literally
+              tens of hundreds of different scenarios, each with their own
+              "correct" option. Because of this, I decided to try and make this
+              website to be a more accurate representation of a reaction time
+              test for fighting game players. As of right now, the only game is
+              street fighter 6, but after I get this up and running, if people
+              really want me to, I can add Tekken or whatever else to the
+              website!
             </p>
           </div>
           <p>

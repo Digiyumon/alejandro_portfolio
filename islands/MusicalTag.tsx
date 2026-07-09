@@ -57,12 +57,12 @@ const App = () => {
       }}
     >
       <HoverButton text="HTML/CSS" onHover={handleHover} />
-      <HoverButton text="JavaScript" onHover={handleHover} />
+      <HoverButton text="Typescript" onHover={handleHover} />
       <HoverButton text="React/Preact" onHover={handleHover} />
-      <HoverButton text="Java" onHover={handleHover} />
+      <HoverButton text="Tableu" onHover={handleHover} />
       <HoverButton text="Python" onHover={handleHover} />
-      <HoverButton text="C#" onHover={handleHover} />
-      <HoverButton text="C++" onHover={handleHover} />
+      <HoverButton text="PostgreSQL" onHover={handleHover} />
+      <HoverButton text="SQL" onHover={handleHover} />
     </div>
   );
 };
