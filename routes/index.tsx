@@ -22,7 +22,7 @@ export default function Home() {
                 <h1>
                   hi! i'm <span>Alejandro</span>
                 </h1>
-                <p>developer, programmer and gamer</p>
+                <p>developer, programmer and photographer</p>
               </div>
               <div class={"buttons-container"}>
                 <IconButton
